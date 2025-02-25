@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Attrition Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body> 
+    <div class="main-content">
+        <div class="hero">
+            <img src="{{ url_for('static', filename='attrition.jpg') }}" alt="Employee Attrition">
+        </div>
+        <div class="form-container">
+            <h2>Employee Details</h2>
+            <form action="/predict" method="post">
+                <div class="form-group">
+                    <label>Job Level:</label>
+                    <input type="number" name="job_level" required>
+                </div>
+                <div class="form-group">
+                    <label>Monthly Income ($):</label>
+                    <input type="number" name="monthly_income" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Total Working Years:</label>
+                    <input type="number" name="total_working_years" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Percent Salary Hike:</label>
+                    <input type="number" name="percent_salary_hike" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Performance Rating:</label>
+                    <input type="number" name="performance_rating" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Years at Company:</label>
+                    <input type="number" name="years_at_company" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Years in Current Role:</label>
+                    <input type="number" name="years_in_current_role" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Years with Current Manager:</label>
+                    <input type="number" name="years_with_curr_manager" required>
+                </div>
+
+                <button type="submit">Predict</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

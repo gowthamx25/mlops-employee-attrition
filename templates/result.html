@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Attrition Predictor</div>
+    </header>
+
+    <div class="result-section">
+        <h2>Prediction Result</h2>
+        
+        {% if error %}
+            <p class="error">Error: {{ error }}</p>
+        {% else %}
+            <h3>{{ prediction }}</h3>
+            <p>Probability of Attrition: {{ probability }}%</p>
+        {% endif %}
+        
+        <a href="/">Try Again</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Attrition Predictor. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
