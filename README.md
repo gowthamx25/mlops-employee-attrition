@@ -22,18 +22,6 @@ This project demonstrates a complete MLOps workflow:
 
 ---
 
-## 📂 Project Structure
-mlops-employee-attrition/
-│── app.py
-│── logistic_regression_model.pkl
-│── EmployeeAttrition115.csv
-│── templates/
-│── static/
-│── README.md
-
-
----
-
 ## ⚙️ How to Run Locally
 
 ### 1. Clone the repository
